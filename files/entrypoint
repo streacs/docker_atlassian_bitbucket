@@ -1,1 +1,7 @@
 #!/bin/bash
+
+if [ "$(stat -c "%Y" "${APPLICATION_INST}/bin/set-bitbucket-home.sh")" -eq "0" ]; then
+  sed --in-place "s~^.*BITBUCKET_HOME=$~  BITBUCKET_HOME=$APPLICATION_HOME~" ${APPLICATION_INST}/bin/set-bitbucket-home.sh
+fi
+
+exec "$@"
