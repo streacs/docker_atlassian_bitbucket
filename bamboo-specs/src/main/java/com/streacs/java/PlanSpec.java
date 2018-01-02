@@ -67,6 +67,7 @@ public class PlanSpec {
             project(),
             "STREACS Atlassian Bitbucket", "CB95EA")
             .enabled(true)
+            .noPluginConfigurations()
             .noNotifications()
             .linkedRepositories("DCK - STREACS Atlassian Bitbucket (master)")
             .planBranchManagement(new PlanBranchManagement()
